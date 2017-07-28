@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main theme colors -->
+    <!--   app branding color for the app bar -->
+    <color name="colorPrimary">#FF9800</color>
+    <!--   darker variant for the status bar and contextual app bars -->
+    <color name="colorPrimaryDark">#F57C00</color>
+    <!--   theme UI controls like checkboxes and text fields -->
+    <color name="colorAccent">#7C4DFF</color>
+    <color name="colorTextPrimary">#212121</color>
+    <color name="colorTextSecondary">#727272</color>
+
+    <!-- Memorize Activity -->
+    <color name="background">#472934</color>
+    <color name="cardBackground">#ffffffff</color>
+    <!-- Hint text -->
+    <color name="hintText">#96596d</color>
+    <!-- Sliding Tab -->
+    <color name="tabBackground">#ffffff</color>
+    <!-- Progress Bar -->
+    <color name="progressText">#000</color>
+    <!-- Button Bar -->
+    <color name="topText">#ffffff</color>
+    <color name="botText">#cccccc</color>
+    <color name="criticalColor">#ff8000</color>
+    <color name="hardColor">#9c35e6</color>
+    <color name="medColor">#0070dd</color>
+    <color name="easyColor">#1cdc00</color>
+    <color name="btnFinishBack">#000000</color>
+    <color name="btnAnswered">#dd4040</color>
+    <!-- Sliding Tab Layer -->
+    <color name="exampleColor">@color/medColor</color>
+    <color name="translationColor">#444444</color>
+    <color name="categoryColor">@color/translationColor</color>
+
+    <!-- CategoryList Activity -->
+    <color name="rightArrow">#000</color>
+
+    <!-- Add Words Sub-Activity -->
+    <color name="no_categories_bkgnd">#ffedf0</color>
+
+    <!-- History Tab Colors for lines in chart -->
+    <color name="spaLine">#aaaaaa</color>
+    <color name="spaCircle">#666666</color>
+    <color name="engLine">#888888</color>
+    <color name="engCircle">#444444</color>
+
+
+    <!-- Some stock colors -->
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="darkGrey">#777777</color>
+    <color name="medGrey">#aaaaaa</color>
+    <color name="medLightGrey">#bbbbbb</color>
+    <color name="lightGrey">#cccccc</color>
+    <color name="lightGrey2">#d9d9d9</color>
+    <color name="lightLightGrey">#eeeeee</color>
+
+</resources>

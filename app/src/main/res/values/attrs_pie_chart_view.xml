@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="PieChartView">
+        <attr name="legendTextSize" format="dimension" />
+        <attr name="legendTextColor" format="color" />
+        <attr name="highlightStrength" format="float" />
+        <attr name="animationDuration" format="integer" />
+    </declare-styleable>
+</resources>

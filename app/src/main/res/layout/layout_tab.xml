@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:paddingLeft="@dimen/tab_horizontal_padding"
+    android:paddingRight="@dimen/tab_horizontal_padding"
+    android:paddingTop="@dimen/tab_vertical_padding"
+    android:paddingBottom="@dimen/tab_vertical_padding"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"
+        android:text="@string/category_header"/>
+
+    <TextView
+        android:id="@+id/categories_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/categoryColor"
+        android:text="@string/hint_default"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/horizontal_rule"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"
+        android:text="@string/examples_header"/>
+
+    <TextView
+        android:id="@+id/examples_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/example_default"/>
+
+</LinearLayout>

@@ -1,0 +1,74 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.timothyshaffer.memora.activity.SelectWordsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <include
+            layout="@layout/layout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!--
+            android:divider="@android:drawable/divider_horizontal_bright"-->
+        <ListView
+            android:id="@+id/listView_selectWords"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/horizontal_rule"
+            android:dividerHeight="1dp"
+            android:fastScrollEnabled="true"
+            android:footerDividersEnabled="false"
+            android:overScrollFooter="@color/transparent"
+            tools:listheader="@layout/list_header_select_words"
+            tools:listitem="@layout/list_item_select_words" />
+        <!-- The above two XML statements hide the very last divider in the list-->
+
+        <!-- Displayed when List is loading -->
+        <ProgressBar
+            android:id="@+id/loadingList_selectWords"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            android:visibility="gone" />
+
+        <!-- Displayed when List is empty -->
+        <TextView
+            android:id="@+id/emptyList_selectWords"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/no_category"
+            android:textSize="36sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_addWords"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="showDialogAddCategory"
+        android:src="@drawable/ic_add_white_48dp" />
+
+</android.support.design.widget.CoordinatorLayout>

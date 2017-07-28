@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="card_flip_full_time">250</integer>
+    <integer name="card_flip_half_time">125</integer>
+
+    <integer name="card_slide_scale_time">250</integer>
+    <integer name="card_slide_scale_wait_time">100</integer>
+    <integer name="card_slide_translate_time">450</integer>
+    <integer name="card_slide_translate_wait_time">350</integer>
+    <integer name="card_slide_next_wait_time">125</integer>
+
+    <integer name="hint_translate_in_time">400</integer>
+    <integer name="hint_fade_out_time">200</integer>
+    <integer name="hint_fade_in_time">300</integer>
+
+    <integer name="btn_translate_out_time">200</integer>
+</resources>

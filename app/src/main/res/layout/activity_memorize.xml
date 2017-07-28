@@ -1,0 +1,298 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_memorize"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MemorizeActivity">
+
+    <include
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <RelativeLayout
+            android:id="@+id/card_area"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/progress_area">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/card_pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- The CardViews will be placed here programmatically -->
+
+            </android.support.v4.view.ViewPager>
+
+
+            <LinearLayout
+                android:id="@+id/result_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <com.timothyshaffer.memora.view.PieChartView
+                    android:id="@+id/pie_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="20dp"
+                    app:animationDuration="1500"
+                    app:highlightStrength="1.12"
+                    app:legendTextColor="@color/white"
+                    app:legendTextSize="55sp" />
+
+                <LinearLayout
+                    android:id="@+id/result_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+                    <!-- Text placeholders, Will be filled by Activity -->
+                    <TextView
+                        android:id="@+id/result_list_critical"
+                        style="@style/AppTheme.ResultListItem"
+                        android:textColor="@color/criticalColor" />
+
+                    <TextView
+                        android:id="@+id/result_list_hard"
+                        style="@style/AppTheme.ResultListItem"
+                        android:textColor="@color/hardColor" />
+
+                    <TextView
+                        android:id="@+id/result_list_med"
+                        style="@style/AppTheme.ResultListItem"
+                        android:textColor="@color/medColor" />
+
+                    <TextView
+                        android:id="@+id/result_list_easy"
+                        style="@style/AppTheme.ResultListItem"
+                        android:textColor="@color/easyColor" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- The sliding layer -->
+            <com.wunderlist.slidinglayer.SlidingLayer xmlns:slidingLayer="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/sliding_layer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                slidingLayer:changeStateOnTap="true"
+                slidingLayer:offsetDistance="80px"
+                slidingLayer:shadowDrawable="@drawable/tab"
+                slidingLayer:shadowSize="80px"
+                slidingLayer:stickTo="bottom">
+
+                <include
+                    layout="@layout/layout_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.wunderlist.slidinglayer.SlidingLayer>
+
+        </RelativeLayout>
+
+        <!-- Progress Bar -->
+        <LinearLayout
+            android:id="@+id/progress_area"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button_bar"
+            android:background="@color/tabBackground"
+            android:orientation="vertical">
+            <!-- Text Progress Indicator -->
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/progress_num"
+                    style="@style/AppTheme.ProgressText.Num"
+                    android:text="@string/num_placeholder" />
+
+                <TextView
+                    android:id="@+id/completed_text"
+                    style="@style/AppTheme.ProgressText"
+                    android:layout_toRightOf="@id/progress_num"
+                    android:paddingLeft="2dp"
+                    android:paddingTop="2dp"
+                    android:text="@string/completed" />
+
+                <TextView
+                    android:id="@+id/remaining_num"
+                    style="@style/AppTheme.ProgressText.Num"
+                    android:layout_toLeftOf="@+id/remaining_text"
+                    android:text="@string/num_placeholder" />
+
+                <TextView
+                    android:id="@+id/remaining_text"
+                    style="@style/AppTheme.ProgressText"
+                    android:layout_alignParentRight="true"
+                    android:paddingLeft="2dp"
+                    android:paddingTop="2dp"
+                    android:text="@string/remaining" />
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="4dp"
+                android:indeterminateOnly="false"
+                android:progress="35"
+                android:progressDrawable="@drawable/progress_bar_yellow" />
+        </LinearLayout>
+        <!-- END Progress Bar -->
+
+        <!-- Button Bar -->
+        <LinearLayout
+            android:id="@+id/button_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <!-- Button #1 -->
+            <FrameLayout
+                android:id="@+id/button_critical"
+                style="@style/AppTheme.ButtonBarButton"
+                android:background="@color/criticalColor">
+
+                <LinearLayout
+                    style="@style/AppTheme.ButtonLayout"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        style="@style/AppTheme.ButtonTextTop"
+                        android:text="@string/critical_main" />
+
+                    <TextView
+                        style="@style/AppTheme.ButtonTextBot"
+                        android:text="@string/critical_sub" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Button #2 -->
+            <FrameLayout
+                android:id="@+id/button_hard"
+                style="@style/AppTheme.ButtonBarButton"
+                android:background="@color/hardColor">
+
+                <LinearLayout
+                    style="@style/AppTheme.ButtonLayout"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        style="@style/AppTheme.ButtonTextTop"
+                        android:text="@string/hard_main" />
+
+                    <TextView
+                        style="@style/AppTheme.ButtonTextBot"
+                        android:text="@string/hard_sub" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Button #3 -->
+            <FrameLayout
+                android:id="@+id/button_med"
+                style="@style/AppTheme.ButtonBarButton"
+                android:background="@color/medColor">
+
+                <LinearLayout
+                    style="@style/AppTheme.ButtonLayout"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        style="@style/AppTheme.ButtonTextTop"
+                        android:text="@string/med_main" />
+
+                    <TextView
+                        style="@style/AppTheme.ButtonTextBot"
+                        android:text="@string/med_sub" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Button #4 -->
+            <FrameLayout
+                android:id="@+id/button_easy"
+                style="@style/AppTheme.ButtonBarButton"
+                android:background="@color/easyColor">
+
+                <LinearLayout
+                    style="@style/AppTheme.ButtonLayout"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        style="@style/AppTheme.ButtonTextTop"
+                        android:text="@string/easy_main" />
+
+                    <TextView
+                        style="@style/AppTheme.ButtonTextBot"
+                        android:text="@string/easy_sub" />
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+        <!-- END Button Bar -->
+        <!-- Button Finish -->
+        <FrameLayout
+            android:id="@+id/button_finish"
+            style="@style/AppTheme.ButtonBarButton"
+            android:layout_alignParentBottom="true"
+            android:background="@color/btnFinishBack"
+            android:visibility="invisible">
+
+            <LinearLayout
+                style="@style/AppTheme.ButtonLayout"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    style="@style/AppTheme.ButtonTextTop"
+                    android:text="@string/finish_main" />
+
+                <TextView
+                    style="@style/AppTheme.ButtonTextBot"
+                    android:text="@string/finish_sub" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/button_answered"
+            style="@style/AppTheme.ButtonBarButton"
+            android:layout_alignParentBottom="true"
+            android:background="@color/btnAnswered"
+            android:visibility="invisible">
+
+            <LinearLayout
+                style="@style/AppTheme.ButtonLayout"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    style="@style/AppTheme.ButtonTextTop"
+                    android:text="@string/answered_main" />
+
+                <TextView
+                    style="@style/AppTheme.ButtonTextBot"
+                    android:text="@string/answered_sub" />
+            </LinearLayout>
+        </FrameLayout>
+
+    </RelativeLayout>
+</LinearLayout>

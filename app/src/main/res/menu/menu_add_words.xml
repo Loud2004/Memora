@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.AddWordsActivity" >
+
+    <item android:id="@+id/action_dismiss"
+        android:icon="@android:drawable/ic_menu_revert"
+        android:titleCondensed="Dismiss"
+        android:title="@string/action_dismiss"
+        app:showAsAction="ifRoom|withText" />
+
+    <item android:id="@+id/action_filter"
+        android:icon="@drawable/ic_action_filter"
+        android:titleCondensed="Filter"
+        android:title="@string/action_filter"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/action_search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always"/>
+
+</menu>

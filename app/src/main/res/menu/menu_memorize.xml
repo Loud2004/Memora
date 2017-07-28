@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.MemorizeActivity">
+
+    <item android:id="@+id/action_add_to_category"
+        android:title="@string/action_add_to_category" />
+
+    <item android:id="@+id/action_add_example"
+        android:title="@string/action_add_example" />
+
+    <item android:id="@+id/action_removeWord"
+        android:title="@string/action_removeWord" />
+
+    <item android:id="@+id/action_feedback"
+        android:title="@string/action_feedback" />
+</menu>

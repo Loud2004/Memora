@@ -1,0 +1,300 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Upper (Always Shown) Area -->
+    <LinearLayout
+        android:id="@+id/progress_list_item_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/progress_top_background"
+        android:orientation="horizontal"
+        android:paddingBottom="3dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/categoryName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-2dp"
+                android:text="@string/category_name"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/categoryDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="@string/category_desc"
+                android:textColor="#444"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/numOfWords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-10dp"
+                android:gravity="center"
+                android:text="@string/num_of_words"
+                android:textColor="@color/criticalColor"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/list_item_words"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <com.timothyshaffer.memora.view.NavArrowView
+            android:id="@+id/nav_arrow"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            app:arrowColor="@color/white"
+            app:arrowDirection="Up"
+            app:circleColor="#444"
+            app:fillCircle="true" />
+        <!--<ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="-10dp"
+            android:background="@android:drawable/expander_ic_maximized" />-->
+
+    </LinearLayout>
+    <!-- END Upper (Always Shown) Area -->
+
+    <!-- Expanded Area -->
+    <LinearLayout
+        android:id="@+id/progress_list_item_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progress_list_item_top"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:background="@drawable/progress_middle_background"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/progress_list_item_difficulties"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="9">
+
+            <!-- Header Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/progress_summary_critical"
+                    android:textSize="12sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/progress_summary_hard"
+                    android:textSize="12sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/progress_summary_medium"
+                    android:textSize="12sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/progress_summary_easy"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Horizontal Rule -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/horizontal_rule_progress" />
+
+
+            <!-- Row #1 -->
+            <LinearLayout
+                android:id="@+id/progress_expanded_row_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="@string/column_spa_eng"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:id="@+id/progress_spa_eng_critical_num"
+                    style="@style/AppTheme.ProgressListNumbers"
+                    android:text="@string/progress_zero"
+                    android:textColor="@color/criticalColor"
+                    />
+                <TextView
+                    android:id="@+id/progress_spa_eng_hard_num"
+                    style="@style/AppTheme.ProgressListNumbers"
+                    android:text="@string/progress_zero"
+                    android:textColor="@color/hardColor"/>
+                <TextView
+                    android:id="@+id/progress_spa_eng_medium_num"
+                    style="@style/AppTheme.ProgressListNumbers"
+                    android:text="@string/progress_zero"
+                    android:textColor="@color/medColor"/>
+                <TextView
+                    android:id="@+id/progress_spa_eng_easy_num"
+                    style="@style/AppTheme.ProgressListNumbers"
+                    android:text="@string/progress_zero"
+                    android:textColor="@color/easyColor"/>
+
+            </LinearLayout>
+
+            <!-- Row #2 -->
+            <LinearLayout
+                android:id="@+id/progress_expanded_row_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="@string/column_eng_spa"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:id="@+id/progress_eng_spa_critical_num"
+                    style="@style/AppTheme.ProgressListNumbers"
+                    android:text="@string/progress_zero"
+                    android:textColor="@color/criticalColor"/>
+                <TextView
+                    android:id="@+id/progress_eng_spa_hard_num"
+                    style="@style/AppTheme.ProgressListNumbers"
+                    android:text="@string/progress_zero"
+                    android:textColor="@color/hardColor"/>
+                <TextView
+                    android:id="@+id/progress_eng_spa_medium_num"
+                    style="@style/AppTheme.ProgressListNumbers"
+                    android:text="@string/progress_zero"
+                    android:textColor="@color/medColor"/>
+                <TextView
+                    android:id="@+id/progress_eng_spa_easy_num"
+                    style="@style/AppTheme.ProgressListNumbers"
+                    android:text="@string/progress_zero"
+                    android:textColor="@color/easyColor"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <com.timothyshaffer.memora.view.VerticalTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="3dp"
+                android:layout_gravity="center"
+                android:text="@string/progress_summary_complete"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:gravity="bottom"
+                android:singleLine="true"/>
+                <!-- singleLine needed to prevent animations
+                     from breaking long words over two lines -->
+
+            <ProgressBar
+                android:id="@+id/vertical_progress_bar"
+                style="@style/Widget.ProgressBar.Vertical"
+                android:layout_width="16dp"
+                android:layout_height="60dp"
+                android:progress="50"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <!-- END Expanded Area -->
+
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/progress_bottom_background"
+        android:layout_below="@id/progress_list_item_middle"
+        android:layout_marginTop="1dp"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Completed:"
+            android:layout_marginRight="5dp"/>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:padding="3dp"
+            android:progressDrawable="@drawable/progress_bar_yellow"
+            android:progress="50"/>
+
+    </LinearLayout>
+    -->
+
+</RelativeLayout>

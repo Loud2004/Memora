@@ -1,0 +1,9 @@
+<resources>
+    <declare-styleable name="OutlineTextView">
+        <attr name="outlineText" format="string" />
+        <attr name="outlineTextSize" format="dimension" />
+        <attr name="outlineTextColor" format="color" />
+        <attr name="outlineColor" format="color" />
+        <attr name="outlineStroke" format="integer" />
+    </declare-styleable>
+</resources>

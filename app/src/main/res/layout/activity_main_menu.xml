@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:gravity="center_vertical"
+    tools:context=".activity.MainMenuActivity">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/logoImageView"
+        android:src="@drawable/memora_logo"
+        android:scaleType="fitCenter"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/menuLayout"
+        android:layout_below="@id/logoImageView"
+        android:paddingBottom="20dp">
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"/>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.70">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnMemorize"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/study_all_words"
+                    android:onClick="onClickStudyAll"/>
+                <Button
+                    android:id="@+id/btnCategoryList"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/study_category"
+                    android:onClick="onClickStudyCategory"/>
+                <Button
+                    android:id="@+id/btnAddWords"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_words"
+                    android:onClick="onClickAddWords"/>
+                <Button
+                    android:id="@+id/btnProgress"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/progress"
+                    android:onClick="onClickProgress"/>
+                <Button
+                    android:id="@+id/btnAbout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about"
+                    android:onClick="onClickAbout"/>
+                <Space
+                    android:layout_width="fill_parent"
+                    android:layout_height="15dp" />
+                <Button
+                    android:id="@+id/btnSettings"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings"
+                    android:onClick="onClickSettings"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

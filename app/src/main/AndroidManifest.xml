@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.timothyshaffer.memora">
+
+    <!-- For DB Backup/Restore -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- For Feedback -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:allowBackup="true">
+        <activity
+            android:name=".activity.MainMenuActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MemorizeActivity"
+            android:label="@string/title_activity_memorize"
+            android:parentActivityName=".activity.MainMenuActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".activity.StudyCategoryActivity"
+            android:label="@string/title_activity_category"
+            android:parentActivityName=".activity.MainMenuActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".activity.ProgressActivity"
+            android:label="@string/title_activity_progress"
+            android:parentActivityName=".activity.MainMenuActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".activity.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName=".activity.MainMenuActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".activity.SelectWordsActivity"
+            android:label="@string/title_activity_select_words"
+            android:parentActivityName=".activity.MainMenuActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".activity.MainMenuActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".activity.AddWordsActivity"
+            android:label="@string/title_activity_add_words"
+            android:launchMode="singleTop"
+            android:parentActivityName=".activity.SelectWordsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.SelectWordsActivity" />
+        </activity>
+        <activity
+            android:name=".activity.WordActivity"
+            android:label="@string/title_activity_word"
+            android:parentActivityName=".activity.AddWordsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.AddWordsActivity" />
+        </activity>
+
+        <!-- name is the name of the class implementing the ContentProvider
+             authorities defines what data this ContentProvider presents -->
+        <provider
+            android:name="com.timothyshaffer.memora.db.MemoraContentProvider"
+            android:authorities="com.timothyshaffer.memora.contentprovider"
+            android:enabled="true"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

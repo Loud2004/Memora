@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/list_item_word_examples"
+        android:fastScrollEnabled="true"
+        android:divider="@drawable/horizontal_rule"
+        android:dividerHeight="1dp"
+        android:footerDividersEnabled="false"
+        android:overScrollFooter="@color/transparent"
+        android:background="@color/white"/>
+        <!-- The above two XML statements hide the very last divider in the list-->
+
+    <TextView android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/no_example"
+        android:textSize="36sp"
+        android:gravity="center"/>
+
+</LinearLayout>

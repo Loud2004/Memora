@@ -1,0 +1,233 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/progress_list_item_difficulties"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/categoryName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/category_name"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Header Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/progress_summary_critical"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/progress_summary_hard"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/progress_summary_medium"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/progress_summary_easy"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Horizontal Rule -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/horizontal_rule_progress" />
+
+
+            <!-- Row #1 -->
+            <LinearLayout
+                android:id="@+id/progress_expanded_row_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="3dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="@string/column_spa_eng"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/progress_spa_eng_critical_num"
+                    style="@style/AppTheme.ProgressListNumbers"
+                    android:text="@string/progress_zero"
+                    android:textColor="@color/criticalColor" />
+
+                <TextView
+                    android:id="@+id/progress_spa_eng_hard_num"
+                    style="@style/AppTheme.ProgressListNumbers"
+                    android:text="@string/progress_zero"
+                    android:textColor="@color/hardColor" />
+
+                <TextView
+                    android:id="@+id/progress_spa_eng_medium_num"
+                    style="@style/AppTheme.ProgressListNumbers"
+                    android:text="@string/progress_zero"
+                    android:textColor="@color/medColor" />
+
+                <TextView
+                    android:id="@+id/progress_spa_eng_easy_num"
+                    style="@style/AppTheme.ProgressListNumbers"
+                    android:text="@string/progress_zero"
+                    android:textColor="@color/easyColor" />
+
+            </LinearLayout>
+
+            <!-- Row #2 -->
+            <LinearLayout
+                android:id="@+id/progress_expanded_row_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="3dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="@string/column_eng_spa"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/progress_eng_spa_critical_num"
+                    style="@style/AppTheme.ProgressListNumbers"
+                    android:text="@string/progress_zero"
+                    android:textColor="@color/criticalColor" />
+
+                <TextView
+                    android:id="@+id/progress_eng_spa_hard_num"
+                    style="@style/AppTheme.ProgressListNumbers"
+                    android:text="@string/progress_zero"
+                    android:textColor="@color/hardColor" />
+
+                <TextView
+                    android:id="@+id/progress_eng_spa_medium_num"
+                    style="@style/AppTheme.ProgressListNumbers"
+                    android:text="@string/progress_zero"
+                    android:textColor="@color/medColor" />
+
+                <TextView
+                    android:id="@+id/progress_eng_spa_easy_num"
+                    style="@style/AppTheme.ProgressListNumbers"
+                    android:text="@string/progress_zero"
+                    android:textColor="@color/easyColor" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="6dp"
+            android:layout_gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/numOfWords"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-5dp"
+                    android:gravity="center"
+                    android:text="@string/num_of_words"
+                    android:textColor="@color/criticalColor"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/list_item_words"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/percentComplete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-5dp"
+                    android:layout_marginRight="-5dp"
+                    android:gravity="center"
+                    android:text="@string/percent_complete"
+                    android:textColor="@color/criticalColor"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/list_item_complete"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

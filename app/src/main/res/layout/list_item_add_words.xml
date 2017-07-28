@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_item_add_words"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="5dp"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/spaWord"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:text="@string/word_spa"
+        android:layout_weight="5"
+        android:layout_gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/engWord"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/word_eng"
+        android:layout_weight="5"
+        android:layout_gravity="center_vertical" />
+
+    <CheckBox
+        android:id="@+id/wordCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:focusable="false" />
+
+</LinearLayout>

@@ -1,0 +1,242 @@
+<resources>
+    <!-- App/Activity Names -->
+    <string name="app_name">Memora</string>
+    <string name="title_activity_memorize">Memorize</string>
+    <string name="title_activity_category">Study Category</string>
+    <string name="title_activity_progress">Progress</string>
+    <string name="title_activity_about">About</string>
+    <string name="title_activity_select_words">Select Words</string>
+    <string name="title_activity_add_words">Add Words</string>
+    <string name="title_activity_word">Add New Word</string>
+    <string name="title_activity_categories_word">Word Categories</string>
+    <string name="title_activity_settings">Settings</string>
+
+
+    <!-- Main Menu Activity -->
+    <string name="study_all_words">Quick Study</string>
+    <string name="no_words_due">No Words Due</string>
+    <string name="study_category">Study Category</string>
+    <string name="select_words">Select Words</string>
+    <string name="progress">Progress</string>
+    <string name="about">About</string>
+    <string name="settings">Settings</string>
+
+
+    <!-- Memorize Activity -->
+    <string name="num_placeholder">00</string>
+    <string name="completed">Completed</string>
+    <string name="remaining">Remaining</string>
+    <string name="critical_main">Critical</string>
+    <string name="critical_sub">Every Time</string>
+    <string name="hard_main">Hard</string>
+    <string name="hard_sub">Every Day</string>
+    <string name="med_main">Med.</string>
+    <string name="med_sub">Every 3 Days</string>
+    <string name="easy_main">Easy</string>
+    <string name="easy_sub">Every 6 Days</string>
+    <string name="finish_main">Finish</string>
+    <string name="finish_sub">Return Home</string>
+    <string name="answered_main">Answered</string>
+    <string name="answered_sub">Click to Change Answer</string>
+    <string name="hint_default">No Categories Available</string>
+    <string name="example_default">No Examples Available.... Yet</string>
+    <!-- Menu Items -->
+    <string name="action_add_to_category">Add to Category</string>
+    <string name="action_add_example">Add Example</string>
+    <string name="action_removeWord">Remove Word</string>
+    <string name="action_feedback">Send Feedback</string>
+    <!-- Report Problem Dialog -->
+    <string name="report_dialog_title">Send Feedback</string>
+    <string name="report_dialog_message">Please send your suggestions to tim@timothyshaffer.com</string>
+    <string name="ok">OK</string>
+    <!-- Sliding Tab Layer -->
+    <string name="category_header">Associated Categories:</string>
+    <string name="examples_header">Examples:</string>
+    <!-- Results List -->
+    <string name="result_critical">%1$d Critical</string>
+    <string name="result_hard">%1$d Hard</string>
+    <string name="result_medium">%1$d Medium</string>
+    <string name="result_easy">%1$d Easy</string>
+
+
+    <!-- Study Category Activity -->
+    <string name="header_left">Category</string>
+    <string name="header_right">Word Count</string>
+    <string name="category_name">Category</string>
+    <string name="category_desc">This is the category description.</string>
+    <string name="num_of_words">82</string>
+    <string name="list_item_words">Words</string>
+    <string name="percent_complete">0%</string>
+    <string name="list_item_complete">Complete</string>
+    <string name="no_data">You need to Add Words before you can study a specific Category</string>
+
+
+    <!-- Select Words Activity -->
+    <string name="no_category">Please create a New Category and add some words to it</string>
+    <string name="category_progress">%1$d of %2$d memorized</string>
+    <!-- Menu -->
+    <string name="action_word_list">Word List</string>
+    <!-- Contextual Action Bar / Edit Menu -->
+    <string name="context_bar_cat_add">Add Words</string>
+    <string name="context_bar_cat_add_short">Add</string>
+    <string name="context_bar_cat_edit">Edit Category</string>
+    <string name="context_bar_cat_edit_short">Edit</string>
+    <string name="context_bar_cat_delete">Delete</string>
+    <!-- Add/Edit Category Dialog -->
+    <string name="add_category_header">Add New Category</string>
+    <string name="edit_category_header">Edit Category</string>
+    <string name="add_edit_category_name_hint">Name (e.g. Greetings)</string>
+    <string name="add_edit_category_desc_hint">Description (e.g. Learn how to say \"Hello\")</string>
+    <string name="add_category_create">Create</string>
+    <string name="edit_category_save">Save Category</string>
+    <string name="add_edit_category_cancel">Cancel</string>
+    <!-- Delete Category Dialog -->
+    <string name="delete_category_title">Delete Category: \"%1$s\"?</string>
+    <string name="delete_category_message">Any words associated with the Category will not be deleted.</string>
+    <string name="delete_category_delete">Delete</string>
+    <string name="delete_category_cancel">Cancel</string>
+
+    <!-- Add Words (To Category) Sub-Activity -->
+    <string name="action_search">Search</string>
+    <string name="action_dismiss">Dismiss Changes</string>
+    <string name="action_filter">Filter Words</string>
+    <string name="no_words">No Words Available</string>
+    <string name="header_spa">Spanish</string>
+    <string name="header_eng">English</string>
+    <string name="word_spa">Spanish Word</string>
+    <string name="word_eng">English Word</string>
+    <string name="add_words_footer">Adding to Category: %1$s</string>
+    <string name="add_words_filter">Only Showing Words Already in This Category</string>
+    <string name="add_words_no_filter">Showing All Words</string>
+    <!-- Contextual Action Bar / Edit Menu -->
+    <string name="context_bar_word_edit">Edit Word</string>
+    <string name="context_bar_word_edit_short">Edit</string>
+    <string name="context_bar_word_delete">Delete</string>
+    <string name="context_bar_add_word_to_categories">Add to Category</string>
+    <!-- Add/Edit Word Dialog -->
+    <string name="add_word_header">Add New Word</string>
+    <string name="edit_word_header">Edit Word</string>
+    <string name="add_edit_word_spa">Spanish:</string>
+    <string name="add_edit_word_spa_hint">e.g. el hombre</string>
+    <string name="add_edit_word_eng">English:</string>
+    <string name="add_edit_word_eng_hint">e.g. the man</string>
+    <string name="add_word_create">Create</string>
+    <string name="edit_word_save">Save Word</string>
+    <string name="add_edit_word_cancel">Cancel</string>
+    <!-- Delete Word Dialog -->
+    <string name="delete_word_title">Delete Word?</string>
+    <string name="delete_word_message">Spanish: %1$s\nEnglish: %2$s</string>
+    <string name="delete_word_delete">Delete</string>
+    <string name="delete_word_cancel">Cancel</string>
+    <!-- Save Dialog -->
+    <string name="save_title">Save Changes</string>
+    <string name="save_message">Save changes to: %1$s?</string>
+    <string name="save_cancel">Discard</string>
+    <string name="save_confirm">Save</string>
+
+    <!-- Categories Word Sub-Activity -->
+    <string name="categories_word_header">Add Word to Categories</string>
+    <string name="categories_word_footer">Spanish: %1$s\nEnglish: %2$s</string>
+
+
+    <!-- Word Activity -->
+    <string name="title_new_word">Add New Word</string>
+    <string name="word_spa_hint">Spanish Word  (e.g. el hombre)</string>
+    <string name="word_eng_hint">English Word  (e.g. the man)</string>
+    <string name="err_msg">Word cannot be blank</string>
+    <string name="no_example">Add some examples of how to use this word</string>
+    <string name="word_spa_example">Spanish example text</string>
+    <string name="word_eng_example">English example text</string>
+    <string name="blank_error">Cannot save an incomplete card</string>
+    <!-- ActionBar / Menu -->
+    <string name="action_save_word">Save</string>
+    <string name="action_dismiss_word">Dismiss Changes</string>
+    <string name="action_delete_word">Delete Word</string>
+
+
+    <!-- Progress Activity -->
+    <string name="progress_summary_header">Progress Summary</string>
+    <string name="progress_summary_critical">Critical</string>
+    <string name="progress_summary_hard">Hard</string>
+    <string name="progress_summary_medium">Medium</string>
+    <string name="progress_summary_easy">Easy</string>
+    <string name="column_spa_eng">Spa to Eng</string>
+    <string name="column_eng_spa">Eng to Spa</string>
+    <string name="progress_summary_complete">Complete</string>
+    <string name="progress_zero">0</string>
+    <!-- Never used -->
+    <string name="no_progress">You Have Not Made Any Progress Yet</string>
+
+    <!-- Settings Activity -->
+    <string name="preference_file_key">com.timothyshaffer.memora.USER_PREFERENCES</string>
+    <string name="frontView">0</string>
+
+    <string name="flashcard_heading">Flashcard Settings</string>
+    <string name="radio_desc">Select which language to show on the Front of the flashcards:</string>
+    <string name="spa_radio">Only show Spanish on the Front</string>
+    <string name="eng_radio">Only show English on the Front</string>
+    <string name="both_radio">Show both languages on the Front (doubles cards)</string>
+    <string name="random_radio">Randomize which language is shown on the Front</string>
+    <string name="database_heading">Database Settings</string>
+    <string name="reset_test_data">Reset Test Data</string>
+    <string name="reset_test_data_desc">Reset all the test data back to it\'s original state.</string>
+    <string name="backup_database_button">Backup Database</string>
+    <string name="backup_database_desc">Create a Backup of all your data.</string>
+    <string name="import_database_button">Import Database</string>
+    <string name="import_database_desc">Import a previous Backup.</string>
+    <string name="settings_version">Memora Version: %1$s</string>
+
+
+    <!-- About Activity -->
+    <string name="about_how_title">How it Works</string>
+    <string name="about_desc_flashcards">Memora uses the simplest and most efficient method of leaning words in a new language:
+        \n\nFlashcards.
+        \n\nFlashcards can be used to learn simple things like nouns, verbs, or adjectives. They
+        can also be used to study whole phrases at a time, or even for practicing verb conjugations.</string>
+    <string name="about_why_title">Why it Works</string>
+    <string name="about_desc_time">Memora will track which words you feel comfortable with and which
+        you need to practice. Each time a word appears, you get to select how confident you are with
+        that word. Options are: "Easy", "Medium", "Hard", or "Critical". Easy words
+        are shown to you less often than Hard words. Critical words are always shown.
+        \n\nYou can also study specific Categories of words regardless of when the individual words
+        are due for review by selecting "Study Category" from the Main Menu.</string>
+
+    <!-- Add Example Dialog -->
+    <string name="add_example_title">Add New Example</string>
+    <string name="add_example_spa_hint">Spanish phrase</string>
+    <string name="add_example_eng_hint">English translation</string>
+    <string name="add_example_ok">Save</string>
+    <string name="add_example_cancel">Cancel</string>
+
+    <!-- ConfirmExitDialog -->
+    <string name="confirm_exit_attach_error"> must implement OnConfirmExitListener</string>
+    <string name="confirm_exit_title">Unsaved Changes</string>
+    <string name="confirm_exit_message">Your changes have not been saved.\n\nDo you want to save changes made to this Card?</string>
+    <string name="confirm_exit_discard">Discard</string>
+    <string name="confirm_exit_save">Save</string>
+    <string name="confirm_exit_cancel">Cancel</string>
+
+    <!-- ConfirmDeleteDialog -->
+    <string name="confirm_delete_attach_error"> must implement OnConfirmDeleteListener</string>
+    <string name="confirm_delete_title">Delete %1$s</string>
+    <string name="confirm_delete_delete">Delete</string>
+    <string name="confirm_delete_cancel">Cancel</string>
+    <string name="confirm_delete_message">
+    <![CDATA[
+        Do you want to permanently delete this %1$s?
+        <br><br>%2$s<br>
+    ]]>
+    </string>
+
+
+    <!-- Feedback Dialog -->
+    <string name="feedback_title">Feedback</string>
+    <string name="feedback_desc">We appreciate the time it takes to send feedback. Therefore, all of our users\' comments are read.</string>
+    <string name="feedback_hint">Your comments</string>
+    <string name="feedback_radio_bug">Bug</string>
+    <string name="feedback_radio_suggestion">Suggestion</string>
+    <string name="feedback_send">Send Feedback</string>
+    <string name="feedback_cancel">Cancel</string>
+
+
+</resources>

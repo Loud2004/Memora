@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.timothyshaffer.memora.activity.WordActivity">
+    <item
+        android:id="@+id/action_save_word"
+        android:icon="@drawable/ic_save"
+        android:title="@string/action_save_word"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/action_delete_word"
+        android:icon="@drawable/ic_delete"
+        android:title="@string/action_delete_word"
+        app:showAsAction="ifRoom|withText"/>
+</menu>

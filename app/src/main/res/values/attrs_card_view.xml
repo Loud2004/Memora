@@ -1,0 +1,17 @@
+<resources>
+    <declare-styleable name="CardView">
+        <attr name="cardFrontText" format="string" />
+        <attr name="cardFrontTextColor" format="color" />
+        <attr name="cardBackText" format="string" />
+        <attr name="cardBackTextColor" format="color" />
+        <attr name="cardBackground" format="color|reference" />
+        <attr name="cardHeightRatio" format="float" />
+
+        <attr name="cardSpaToEngTextColor" format="color" />
+        <attr name="cardEngToSpaTextColor" format="color" />
+    </declare-styleable>
+
+    <color name="defaultCardTextColor">#000000</color>
+    <color name="defaultCardLangColor">#cccccc</color>
+    <string name="defaultCardText">Default Text</string>
+</resources>
